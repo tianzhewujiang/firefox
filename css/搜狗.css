@@ -1,0 +1,59 @@
+@-moz-document regexp("^http://www\.sogou\.com/s.*"),  
+regexp("^http://www\.sogou\.com/sogou.*"),  
+regexp("^http://www\.sogou\.com/.*") {
+   
+/* 隐藏右边相关 */
+#right { display: none !important; }
+/* 让搜索内容可以排满全屏-貌似不管？ */
+#main { width: 100% !important; margin: 0px !important; }
+/* 让出一点左边距，前面的百分比就是，嫌窄了可以自行修改，
+   但最好能让前后两个百分比加起来刚好是100%，这样既不会浪费空间，又不会把页面撑大 */
+#main { padding-left: 0.6% !important; width: 100% !important; }
+/* 页面内容分为2列，并设置列间距为0px，
+   需要设置3列或更多列的同学请自行修改，当然相应的下面的搜索结果条目的宽度也需要相应的修改 */
+#main {
+    -moz-column-count: 2 !important;
+    -moz-column-gap: 138px !important;
+}
+/* 每条搜索内容设置 */
+.vrwrap, .rb, .vrPic, .wbvr {  display:inline-block !important;
+  width:115% !important;
+  background-color:#E5ECF9!important;
+  -moz-box-sizing:border-box !important;
+  box-sizing:border-box !important;
+  padding:5px !important;
+  border:2px solid transparent !important;
+  background-clip:padding-box !important;
+	border-radius: 10px !important; /* 圆角 */
+} 
+/* 搜狗整合内容设置 */
+.aggrBox {  display:inline-block !important;
+    width:109% !important;
+    background: none repeat scroll 0% 0% #FFF; /* 搜狗整合内容样式清除 */
+    background-color: #FFF;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+} 
+.tweetbox
+{  display:inline-block !important;
+  width:96% !important;
+} 
+.wbvr {  display:inline-block !important;
+  width:100% !important;
+} 
+#tweetbox {  display:inline-block !important;
+  width:100% !important;
+  background-color:#E5ECF9!important;
+  -moz-box-sizing:border-box !important;
+  box-sizing:border-box !important;
+  padding:5px !important;
+  border:2px solid transparent !important;
+  background-clip:padding-box !important;
+	border-radius: 10px !important; /* 圆角 */
+} 
+}

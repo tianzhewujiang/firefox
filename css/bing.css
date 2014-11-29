@@ -1,0 +1,35 @@
+@-moz-document url-prefix("http://cn.bing.com/search"), url-prefix("http://www.bing.com/search")
+{
+#b_context,#sw_tfbb{ display:none !important;}
+#b_results, #b_content
+{   float: none !important;
+	  width: 99% !important;
+  	padding: 2px 3px 2px 5px !important;
+}
+.qscolumn{  margin-right : 0px !important;  width: 50% !important;}
+/*输入框*/
+.b_searchboxForm > input#sb_form_q{	min-width : 700px !important;}
+  .sw_box >.sw_bd{padding-top: 4px !important;}
+	
+/* 页面内容分为2列，并设置列间距为5px，
+   需要设置3列或更多列的同学请自行修改，当然相应的下面的搜索结果条目的宽度也需要相应的修改 */
+#b_results {
+    -moz-column-count: 2 !important;
+    -moz-column-gap: 5px !important;
+}
+.b_algo, .b_ans
+{  display:inline-block !important;
+  width:100% !important;
+  -moz-box-sizing:border-box !important;
+  box-sizing:border-box !important;
+  padding:10px !important;  border:5px solid transparent !important;
+  background-clip:padding-box !important;
+  background-color:#E5ECF9!important;
+  margin:0 !important;
+  vertical-align:top !important;
+  counter-increment:gOrder 1;
+  outline:0px solid #E8E8E8;  /*外边线*/
+  outline-offset:-5px;
+	border-radius: 15px !important; /*圆角*/
+	}
+}
